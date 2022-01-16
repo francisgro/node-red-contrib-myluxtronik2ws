@@ -8,7 +8,7 @@ This work is inspired by [node-red-contrib-luxtronik2@github](https://github.com
 ### Installation
 1. Clone this project to ```<YourPath>```.
 2. ```cd <YourPath> && npm install```
-3. Switch to your Node-Red installation (by default: cd $HOME/.node-red```).
+3. Switch to your Node-Red installation (by default: ```cd $HOME/.node-red```).
 4. ```npm install <YourPath>```
 
 ### How to use
