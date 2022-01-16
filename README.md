@@ -3,7 +3,7 @@ A Node-Red module which enables read/write access to Luxtronik2 heat pump contro
 
 This work is inspired by [node-red-contrib-luxtronik2@github](https://github.com/coolchip/node-red-contrib-luxtronik2) and [node-red-contrib-luxtronik2-ws@github](https://github.com/Bouni/node-red-contrib-luxtronik2-ws). It is an extention with a first example for setting heat pump parameters. 
 
-**Disclaimer: Use at your own risk! I do not provide any guarantees that this software works with your heat pump or that it is free of bugs.Write access to the heat pump could potentially lead to negative effects. You should know what you are doing.**
+**Disclaimer: Use at your own risk! I do not provide any guarantees that this software works with your heat pump or that it is free of bugs. Write access to the heat pump could potentially lead to negative effects. You should know what you are doing.**
 
 ### Installation
 1. Clone this project to ```<YourPath>```.
