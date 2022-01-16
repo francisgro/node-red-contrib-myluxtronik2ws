@@ -1,7 +1,7 @@
 ## node-red-contrib-myluxtronik2ws
 A [Node-Red](https://nodered.org) module which enables read/write access to Luxtronik2 heat pump controllers via WebSockets (tested with firmware version 3.85.2).
 
-This work is inspired by [node-red-contrib-luxtronik2@github](https://github.com/coolchip/node-red-contrib-luxtronik2) and [node-red-contrib-luxtronik2-ws@github](https://github.com/Bouni/node-red-contrib-luxtronik2-ws). It is an extention with a first example for setting heat pump parameters. 
+This work is inspired by [node-red-contrib-luxtronik2@github](https://github.com/coolchip/node-red-contrib-luxtronik2) and [node-red-contrib-luxtronik2-ws@github](https://github.com/Bouni/node-red-contrib-luxtronik2-ws). It is an extension with a first example for setting heat pump parameters. 
 
 **Disclaimer: Use at your own risk! I do not provide any guarantees that this software works with your heat pump or that it is free of bugs. Write access to the heat pump could potentially lead to negative effects. You should know what you are doing.**
 
