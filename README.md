@@ -6,10 +6,11 @@ This work is inspired by [node-red-contrib-luxtronik2@github](https://github.com
 **Disclaimer: Use at your own risk! I do not provide any guarantees that this software works with your heat pump or that it is free of bugs.Write access to the heat pump could potentially lead to negative effects. You should know what you are doing.**
 
 ### Installation
-Just execute from your Node-Red folder:
-```
-    npm install node-red-contrib-myluxtronik2ws
-```
+1. Clone this project to ```<YourPath>```.
+2. ```cd <YourPath> && npm install```
+3. Switch to your Node-Red installation, by default $HOME/.node-red.
+4. ```npm install <YourPath>```
+
 ### How to use
 #### Reading heat pump data
 1. Drag the node myluxtronik2ws-get into the flow.
