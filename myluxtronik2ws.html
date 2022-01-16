@@ -1,0 +1,122 @@
+<script type="text/javascript">
+    RED.nodes.registerType('myLuxtronik2ws-set',{
+        category: "function",
+        color: '#FDF0C2',
+        defaults: {
+            host: {value:"192.168.0.33", required:true, validate: function(val) {
+                    return val.match(/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/);
+                }
+            },
+            port: {value:8214, required:true, validate:function(val){
+                    var port = parseInt(val);
+                    return (port > 0) && (port < 0x10000);
+                }
+            },
+            password: {value: 999999, required:true, validate:function(val){
+                    return val.match(/^[0-9]{6}$/);
+                }
+            },
+            instPassword: {value: 9445, required:true, validate:function(val){
+                    return val.match(/^[0-9]{4}$/);
+                }
+            },
+            parameter: {value: "stoerung", required:true}
+        },
+        inputs:1,
+        outputs:0,
+        icon: "db.svg",
+        label: function() {
+            return "myLuxtronik2ws-set";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="myLuxtronik2ws-set">
+    <h4>Connection settings</h4>
+    <div class="form-row">
+        <label for="node-input-host"><i class="icon-bookmark"></i> Host</label>
+        <input type="text" id="node-input-host">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="icon-bookmark"></i> Port</label>
+        <input type="text" id="node-input-port">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="icon-bookmark"></i> Password</label>
+        <input type="text" id="node-input-password">
+    </div>
+    <div class="form-row">
+        <label for="node-input-instPassword"><i class="icon-bookmark"></i> Installer Password</label>
+        <input type="text" id="node-input-instPassword">
+    </div>
+    <h4>Set Value</h4>
+    <div class="form-row">
+        <label for="node-input-parameter"><i class="fa fa-fish"></i> Parameter</label>
+        <select type="text" id="node-input-parameter">
+            <option value="stoerung">Störung</option>
+        </select>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="myLuxtronik2ws-set">
+    <p>Connects to a Luxtronik2 heat pump controller and sets specified value.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+       <dt> Message payload <span class="property-type">string | number</span></dt>
+       <dd> Parameter value to be written as number or string. </dd>
+       <dt> Parameter <span class="property-type">choose from drop down list</span></dt>
+       <dd> Possible values for parameters:
+          <ul>
+          <li>Störung: 0 (mit ZWE), 1 (ohne ZWE), 2 (Heizung), 3 (Warmwasser)</li>
+          </ul>
+       </dd>
+    </dl>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('myLuxtronik2ws-get',{
+        category: "function",
+        color: '#FDF0C2',
+        defaults: {
+            host: {value:"192.168.0.33", required:true, validate: function(val) {
+                    return val.match(/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/);
+                }
+            },
+            port: {value:8214, required:true, validate:function(val){
+                    var port = parseInt(val);
+                    return (port > 0) && (port < 0x10000);
+                }
+            },
+            password: {value: 999999, required:true, validate:function(val){
+                    return val.match(/^[0-9]{6}$/);
+                }
+            }
+        },
+        inputs:1,
+        outputs:1,
+        icon: "db.svg",
+        label: function() {
+            return "myLuxtronik2ws-get";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="myLuxtronik2ws-get">
+    <h4>Connection settings</h4>
+    <div class="form-row">
+        <label for="node-input-host"><i class="icon-bookmark"></i> Host</label>
+        <input type="text" id="node-input-host">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="icon-bookmark"></i> Port</label>
+        <input type="text" id="node-input-port">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="icon-bookmark"></i> Password</label>
+        <input type="text" id="node-input-password">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="myLuxtronik2ws-get">
+    <p>Connects to a Luxtronik2 heat pump controller and retrieves all values.</p>
+</script>
